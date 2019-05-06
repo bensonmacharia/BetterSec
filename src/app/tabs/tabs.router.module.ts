@@ -50,20 +50,20 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'report',
+        path: 'messaging',
         children: [
           {
             path: '',
-            loadChildren: '../report/report.module#ReportPageModule'
+            loadChildren: '../messaging/messaging.module#MessagingPageModule'
           }
         ]
       },
       {
-        path: 'reported',
+        path: 'notifications',
         children: [
           {
             path: '',
-            loadChildren: '../reported/reported.module#ReportedPageModule'
+            loadChildren: '../notifications/notifications.module#NotificationsPageModule'
           }
         ]
       }

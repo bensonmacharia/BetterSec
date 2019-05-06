@@ -11,8 +11,8 @@ import { ContactPageModule } from '../contact/contact.module';
 import { AboutPageModule } from '../about/about.module';
 import { HomePageModule } from '../home/home.module';
 import { FeedbackPageModule } from '../feedback/feedback.module';
-import { ReportPageModule } from '../report/report.module';
-import { ReportedPageModule } from '../reported/reported.module';
+import { MessagingPageModule } from '../messaging/messaging.module';
+import { NotificationsPageModule } from '../notifications/notifications.module';
 
 @NgModule({
   imports: [
@@ -24,8 +24,8 @@ import { ReportedPageModule } from '../reported/reported.module';
     AboutPageModule,
     ContactPageModule,
     FeedbackPageModule,
-    ReportPageModule,
-    ReportedPageModule
+    MessagingPageModule,
+    NotificationsPageModule
   ],
   declarations: [TabsPage]
 })

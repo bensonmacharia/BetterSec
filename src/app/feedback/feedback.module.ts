@@ -1,17 +1,18 @@
-import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { FeedbackPage } from './feedback.page';
+import {IonicModule} from '@ionic/angular';
+import {RouterModule} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {FeedbackPage} from './feedback.page';
 
 @NgModule({
-  imports: [
-    IonicModule,
-    CommonModule,
-    FormsModule,
-    RouterModule.forChild([{ path: '', component: FeedbackPage }])
-  ],
-  declarations: [FeedbackPage]
+    imports: [
+        IonicModule,
+        CommonModule,
+        FormsModule,
+        RouterModule.forChild([{path: '', component: FeedbackPage}])
+    ],
+    declarations: [FeedbackPage]
 })
-export class FeedbackPageModule {}
+export class FeedbackPageModule {
+}

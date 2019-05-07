@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-signs',
-  templateUrl: 'feedback.page.html',
-  styleUrls: ['feedback.page.scss']
+    selector: 'app-signs',
+    templateUrl: 'feedback.page.html',
+    styleUrls: ['feedback.page.scss']
 })
-export class FeedbackPage {}
+export class FeedbackPage {
+}

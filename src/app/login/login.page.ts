@@ -1,7 +1,6 @@
-import {MenuController} from '@ionic/angular';
-import {Component, OnInit, OnDestroy} from '@angular/core';
-import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
-import {NavController} from '@ionic/angular';
+import {MenuController, NavController} from '@ionic/angular';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../services/authentication.service';
 
 @Component({

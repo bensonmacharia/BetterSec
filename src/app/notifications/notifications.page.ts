@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-signs',
-  templateUrl: 'notifications.page.html',
-  styleUrls: ['notifications.page.scss']
+    selector: 'app-signs',
+    templateUrl: 'notifications.page.html',
+    styleUrls: ['notifications.page.scss']
 })
-export class NotificationsPage {}
+export class NotificationsPage {
+}

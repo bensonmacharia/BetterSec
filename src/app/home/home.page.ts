@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from '../services/authentication.service';
-import { NavController, ModalController } from '@ionic/angular';
+import {NavController} from '@ionic/angular';
 
 @Component({
     selector: 'app-home',
@@ -10,6 +10,8 @@ import { NavController, ModalController } from '@ionic/angular';
 export class HomePage implements OnInit {
 
     userEmail: string;
+    userId: string;
+
     constructor(
         private navCtrl: NavController,
         private authService: AuthenticationService
@@ -18,18 +20,21 @@ export class HomePage implements OnInit {
 
     ngOnInit() {
 
-        if (this.authService.userDetails()) {
-            this.userEmail = this.authService.userDetails().email;
-        } else {
-            this.navCtrl.navigateBack('');
-        }
+        console.log(this.authService.checkUserLogedIn());
+
+        // if (this.authService.userDetails()) {
+        //     this.userEmail = this.authService.userDetails().email;
+        //     this.userId = this.authService.userDetails().uid;
+        // } else {
+        //     this.navCtrl.navigateBack('/login');
+        // }
     }
 
     logout() {
         this.authService.logoutUser()
             .then(res => {
                 console.log(res);
-                this.navCtrl.navigateBack('');
+                this.navCtrl.navigateBack('/login');
             })
             .catch(error => {
                 console.log(error);

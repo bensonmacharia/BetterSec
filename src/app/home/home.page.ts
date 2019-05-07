@@ -1,25 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Elearn, ElearnService } from '../services/elearn.service';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
-  
-  elearns: Elearn[];
+export class HomePage {
 
-  constructor(private elearnService: ElearnService) { }
-
-  ngOnInit() {
-    this.elearnService.getElearns().subscribe(res => {
-      this.elearns = res;
-    });
-  }
-
-  remove(item) {
-    this.elearnService.removeElearn(item.id);
-  }
+  constructor() { }
 
 }

@@ -11,16 +11,8 @@ import {AuthenticationService} from '../services/authentication.service';
 })
 export class LoginPage implements OnInit, OnDestroy {
 
-    validationsForms: FormGroup;
+    validationsForm: FormGroup;
     errorMessage = '';
-
-    constructor(
-        private menuCtrl: MenuController,
-        private navCtrl: NavController,
-        private authService: AuthenticationService,
-        private formBuilder: FormBuilder
-    ) {
-    }
 
     validationMessages = {
         email: [
@@ -33,9 +25,17 @@ export class LoginPage implements OnInit, OnDestroy {
         ]
     };
 
+    constructor(
+        private menuCtrl: MenuController,
+        private navCtrl: NavController,
+        private authService: AuthenticationService,
+        private formBuilder: FormBuilder
+    ) {
+    }
+
     ngOnInit() {
         this.menuCtrl.enable(false);
-        this.validationsForms = this.formBuilder.group({
+        this.validationsForm = this.formBuilder.group({
             email: new FormControl('', Validators.compose([
                 Validators.required,
                 Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
@@ -57,7 +57,7 @@ export class LoginPage implements OnInit, OnDestroy {
             .then(res => {
                 console.log(res);
                 this.errorMessage = '';
-                this.navCtrl.navigateForward('/dashboard');
+                this.navCtrl.navigateForward('/tabs/home');
             }, err => {
                 this.errorMessage = err.message;
             });

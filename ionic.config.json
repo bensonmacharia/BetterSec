@@ -1,6 +1,8 @@
 {
   "name": "BetterSec",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "a4db5bc3"
 }

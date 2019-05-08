@@ -17,6 +17,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 
 import * as firebase from 'firebase';
 import {ReactiveFormsModule} from '@angular/forms';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 firebase.initializeApp(environment.firebase);
 
@@ -24,7 +25,8 @@ firebase.initializeApp(environment.firebase);
     declarations: [AppComponent, MenuItemComponent],
     entryComponents: [],
     imports: [
-        BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireAuthModule, ReactiveFormsModule
+        // tslint:disable-next-line:max-line-length
+        BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireAuthModule, ReactiveFormsModule, AngularFirestoreModule.enablePersistence()
     ],
     providers: [
         StatusBar,

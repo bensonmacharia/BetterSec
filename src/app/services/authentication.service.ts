@@ -47,18 +47,11 @@ export class AuthenticationService {
 
     persistLoginDetails() {
         return firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-
     }
 
     checkUserLogedIn() {
         firebase.auth().onAuthStateChanged(user => {
-            if (user) {
-                // User is signed in.
-                return firebase.auth().currentUser;
-            } else {
-                // User is signed out.
-                return 'not found';
-            }
+            return user;
         });
     }
 }

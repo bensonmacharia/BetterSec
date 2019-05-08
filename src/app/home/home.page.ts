@@ -20,7 +20,7 @@ export class HomePage implements OnInit {
 
     ngOnInit() {
 
-        console.log(this.authService.checkUserLogedIn());
+        console.log(this.authService.userDetails());
 
         // if (this.authService.userDetails()) {
         //     this.userEmail = this.authService.userDetails().email;
